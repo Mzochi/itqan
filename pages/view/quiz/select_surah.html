@@ -1,0 +1,61 @@
+               
+               
+               
+               
+               
+               <center>
+               
+               
+              <table class="option">
+              <tr>
+              <td align="right"> من سورة:</td>
+              <td align="left"><select class="select_surah" id="surah_from"></select></td>
+              </tr>
+              
+              <tr>
+              <td align="right"> إلى سورة:</td>
+              <td align="left"><select class="select_surah"  id="surah_to"></select></td>
+              </tr>
+              
+              <tr>
+              <td align="right"> عدد الأسئلة:</td>
+              <td align="left"><select class="select_surah"  id="surah_num"></select> </td>
+              </tr>
+              
+              </table>
+     
+
+               <button class="change_page button button_option" data-page_id="question_surah" id="enter_question_surah" > الدخول للاختبار </button>
+               
+               </center>  
+               
+               
+               <script>
+               
+			   
+			    surah_data.data.forEach(function( data ){
+			    
+				$("#surah_from").append("<option value='"+data.id+"' >"+ data.name +"</option>");
+				
+				if(data.id != 114 )
+				$("#surah_to").append("<option value='"+data.id+"'  >" + data.name +" </option>");
+				else $("#surah_to").append("<option value='"+data.id+"' selected >" + data.name +" </option>");
+				
+				
+				
+				});
+				
+				selects.make_option( "surah_num" , 100 , 10 );
+			   
+			   
+				/***/
+				$("#enter_question_surah").on( 'touchend', function(){
+				surahAction.setting();
+				});
+				/***/
+				
+				
+               
+               </script>
+               
+ 

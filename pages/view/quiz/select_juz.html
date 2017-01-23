@@ -1,0 +1,49 @@
+               
+               
+               
+               
+               
+               <center>
+               
+               
+              <table class="option">
+              <tr id="juz_tr_from">
+              <td align="right"> من الجزء:</td>
+              <td align="left"> <select id="juz_from"></select> </td>
+              </tr>
+              
+              <tr id="juz_tr_to">
+              <td align="right"> إلى الجزء:</td>
+              <td align="left"> <select id="juz_to"></select> </td>
+              </tr>
+              
+              <tr id="juz_tr_num">
+              <td align="right"> عدد الأسئلة:</td>
+              <td align="left"> <select id="juz_num"></select> </td>
+              </tr>
+              
+              </table>
+     
+
+               <button class="change_page button button_option" data-page_id="question_juz" id="enter_question_juz" > الدخول للاختبار </button>
+               
+               </center>  
+               
+               
+               <script>
+               
+			   
+				/***/
+				$("#enter_question_juz").on( 'touchend', function(){
+				juzAction.setting();
+				});
+				/***/
+				
+				
+				selects.make_option( "juz_from" , 30 , 1 );
+				selects.make_option( "juz_to" , 30 , 30 );
+				selects.make_option( "juz_num" , 100 , 10 );
+               
+               </script>
+               
+ 

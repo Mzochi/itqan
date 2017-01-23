@@ -1,0 +1,152 @@
+              
+              
+              
+              
+               
+              <div class="are_you_ready" id="guess_are_you_ready">
+              <table class="box_you_ready"><tr><td>
+              
+              <p class="you_ready_statement"> هل أنت مستعد؟ </p>
+              <button class="button" id="guess_start" > ابدأ الاختبار </button> 
+              
+              </td></tr></table>
+               
+              </div>
+              
+              
+              <!--------------------------------------------------->
+             
+              
+              
+              <div class="main_box_question" id="guess_main_box_question" >
+              <table class="box_question"><tr><td>
+              
+              
+              <h1>
+              السؤال      
+              
+              <span id="guess_q_presNum">   </span> 
+              /
+              <span id="guess_q_num">   </span>
+               
+              
+              </h1>
+              في أي سورة جاءت الآية التالية  
+              
+              </td></tr></table>
+              
+              
+              <center>
+              
+              <table class="box_ayah"><tr><td>
+              ﴿
+              <span class="verse" id="guess_verse">  الآية  </span>
+              ﴾
+              ﴿
+              <span  class="number_ayah" id="guess_number_ayah" > رقم الآية   </span> 
+              ﴾
+              
+                
+              
+            
+              
+              </td></tr></table>
+                
+              </center>
+              
+              <table align="center" class="box_buttons">
+              
+              <tr>
+              <td><button class="button button_guess" data-surah_id="" >  </button> </td>
+              <td><button class="button button_guess" data-surah_id="" >  </button></td>
+              </tr>
+              
+               <tr>
+              <td><button class="button button_guess" data-surah_id="" >  </button> </td>
+              <td><button class="button button_guess" data-surah_id="" >  </button></td>
+              </tr>
+              
+               <tr>
+              <td><button class="button button_guess" data-surah_id="" >  </button> </td>
+              <td><button class="button button_guess" data-surah_id="" >  </button></td>
+              </tr>
+   
+              
+              </table>
+              </div>
+              
+              
+              
+              <!--------------------------------------------------->
+              
+              
+             
+              <div class="box_correction" id="guess_box_correction" >
+              <table width="100%" height="100%"><tr><td>
+               <center>
+              <div class="box_correction_background">
+              
+               <h1 class="correction_statement true_statement"  id="guess_true_statement"> أحسنت إجابة صحيحة </h1>
+               <h1 class="correction_statement false_statement" id="guess_false_statement">
+                خطأ، الإجابة <span class="true_surah_name" id="guess_true_surah_name"> مريم </span>     
+                </h1>
+               <button class="button button_go_on" id="guess_go_on" > استمرار </button>
+              
+              
+              
+              
+              </div>
+                 </center>
+              </td></tr></table>
+             
+              </div>
+              
+              <!--------------------------------------------------->
+              
+              <div class="box_this_degree" id="guess_box_this_degree" >
+              <table width="100%" height="100%"><tr><td>
+              <center>
+                 
+                 <h2> النتيجة النهائية </h2>
+                 <h1> 95% </h1>
+                  
+              </center>
+              </td></tr></table>
+              
+              
+              </div>
+              
+              
+              <br>
+              <br>
+              
+              
+              <script>
+              
+			  /* عند الضغط على بدء الاختبار */
+			  $("#guess_start").on( 'touchend', function(){
+			  guessAction.start();
+			  });
+			  
+			  
+			  /* عند الضغط على السؤال التالي */
+			  $(".button_guess").on( 'touchend', function(){
+ 			  
+			  var answer = $(this).attr("data-surah_id");
+			  guessAction.correction( answer );
+			 
+			  });
+			  
+			  /* عند الضغط على السؤال التالي */
+			  $("#guess_go_on").on( 'touchend', function(){
+			  guessAction.go_on();
+			 
+			  });
+			  
+              
+              </script>
+           
+              
+              
+              
+              

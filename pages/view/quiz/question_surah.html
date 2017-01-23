@@ -1,0 +1,151 @@
+              
+              
+              
+              
+               
+              <div class="are_you_ready" id="surah_are_you_ready">
+              <table class="box_you_ready"><tr><td>
+              
+              <p class="you_ready_statement"> هل أنت مستعد؟ </p>
+              <button class="button" id="surah_start" > ابدأ الاختبار </button> 
+              
+              </td></tr></table>
+               
+              </div>
+              
+              
+              <!--------------------------------------------------->
+             
+              
+              
+              <div class="main_box_question" id="surah_main_box_question" >
+              <table class="box_question"><tr><td>
+              
+              
+              <h1>
+              السؤال      
+              
+              <span id="surah_q_presNum">   </span> 
+              /
+              <span id="surah_q_num">   </span>
+               
+              
+              </h1>
+              أكمل قوله تعالى من سورة <span id="surah_surah_name"> </span> 
+              
+              </td></tr></table>
+              
+              
+              <center>
+              
+              <table class="box_ayah"><tr><td>
+              ﴿
+              <span class="verse" id="surah_verse">  الآية  </span>
+              ﴾
+              ﴿
+              <span  class="number_ayah" id="surah_number_ayah" > رقم الآية   </span> 
+              ﴾
+              
+                
+              
+            
+              
+              </td></tr></table>
+                
+              </center>
+              
+              <table class="box_buttons">
+              
+              <tr>
+              <td> <button class="button button_answer" id="surah_getPrev" > < الآية السابقة </button> </td>
+              <td><button class="button button_answer"  id="surah_getNext"  > الآية التـالــية > </button></td>
+              </tr>
+              
+              <tr>
+              <td colspan="2"><button class="button button_answer"   id="surah_go_on"  > السؤال التالي! </button></td>
+              </tr>
+               
+              
+              </table>
+              </div>
+              
+              
+              
+              <!--------------------------------------------------->
+              
+              
+             
+              <div class="box_correction" id="surah_box_correction" >
+              <table width="100%" height="100%"><tr><td>
+               <center>
+              <div class="box_correction_background">
+              
+               <h1 class="correction_statement"> هل كانت إجابتك صحيحة؟ </h1>
+              <button class="no_answer"  id="surah_no_answer"> لا </button>
+              <button class="yes_answer" id="surah_yes_answer"> نعم </button>
+              
+              
+              </div>
+                 </center>
+              </td></tr></table>
+             
+              </div>
+              
+              <!--------------------------------------------------->
+              
+              <div class="box_this_degree" id="surah_box_this_degree" >
+              <table width="100%" height="100%"><tr><td>
+              <center>
+                 
+                 <h2> النتيجة النهائية </h2>
+                 <h1> 95% </h1>
+                  
+              </center>
+              </td></tr></table>
+              
+              
+              </div>
+              
+              
+              <script>
+              
+			  /* عند الضغط على بدء الاختبار */
+			  $("#surah_start").on( 'touchend', function(){
+			  surahAction.start();
+			  });
+			  
+			  /* عند الضغط على الآية التالية */
+			  $("#surah_getNext").on( 'touchend', function(){
+			  surahAction.next();
+			  });
+			  
+			  /* عند الضغط على الآية السّابقة */
+			  $("#surah_getPrev").on( 'touchend', function(){
+			  surahAction.prev();
+			  });
+			  
+			  
+			  /* عند الضغط على السؤال التالي */
+			  $("#surah_go_on").on( 'touchend', function(){
+			  surahAction.go_on();
+			 
+			  });
+			  
+			  
+			  /* عند الضغط على زر  لا */
+			  $("#surah_no_answer").on( 'touchend', function(){
+			  surahAction.no_answer();
+			  });
+			  
+			  /* عند الضغط على زر  نعم */
+			  $("#surah_yes_answer").on( 'touchend', function(){
+			  surahAction.yes_answer();
+			  });
+			   
+              
+              </script>
+           
+              
+              
+              
+              

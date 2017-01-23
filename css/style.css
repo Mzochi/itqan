@@ -1,0 +1,306 @@
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  /************ Fonts *************/
+			  @font-face {
+			  font-family: 'Changa';
+			  src: url(fonts/Changa-Light.ttf);
+			  }
+			  
+			  
+			  /************ Main *************/
+			  *{
+			  border:none; outline:none; border-spacing: 0px;  border-radius: 0; 
+			  direction:rtl;
+			  padding:0px; margin:0px;   
+			  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+			  -webkit-tap-highlight-color: rgba(0,0,0,0);
+			  font-family: Changa; 
+			  }
+			  
+			 a{ color: inherit; text-decoration: none;} 
+			  
+			  html{height:100%;}
+			  
+			  body{
+			  background: url(../img/background.png)  100px 0px  repeat , linear-gradient( 120deg,#00f48a, #008567);
+			  -webkit-touch-callout: none;   -webkit-text-size-adjust: none;    -webkit-user-select: none; 
+			  font-family: Changa;
+			  }
+			  
+			  .white_font{ color:#FFF; text-shadow: 0px 1px 1px #006600; font-weight:100; }
+			  
+			  
+			  
+			  
+			  
+			  
+			  /************ Toolbar *************/
+			  
+			  #toolbar{
+			  width:100%; height:65px;
+			  background: #FFF;
+			  position: fixed; bottom:0px; right:0px;
+			  
+			  }
+			  
+			  #toolbar table{ width:100%; height:100%; color:#FFF; text-align:center; font-size:13px; font-family: arial ; }
+			  
+			  .icons{font-size:26px; margin-bottom: -10px;}
+			  
+			  #toolbar .buttonTool{
+			  color: #a1a1a1; 
+			  box-shadow: 0px 0px 0px 0px #ececec inset, 0px 0px 0px 0px #fff inset,0px 0px 0px 0px #e0e0e0 inset,0px 0px 0px 0px #e0e0e0 inset, 0px 0px 0px 0px #e0e0e0 inset;
+			  transition: color 350ms, box-shadow 350ms, text-shadow 350ms;  
+			  text-shadow: 0px -1px 0px #fff; 
+			  transition: color 350ms, box-shadow 350ms, text-shadow 350ms ; 
+			  font-family: arial ;
+			  }
+			  
+			  #toolbar .buttonTool_clicked{
+			  box-shadow:  0px -4px 0px 0px #00d179 inset ,0px 0px 0px 0px #eeeeee inset,0px 0px 0px 0px #eeeeee inset ; 
+			  color: #00d179; text-shadow:  0px 2px 10px 5px #fff;
+			  font-family: arial ;
+			  }
+			  
+			  
+			  /******** Mains ********/
+			  
+			  #master{
+			  height: -o-calc(100% - 65px); height: -webkit-calc(100% - 65px); height: -moz-calc(100% - 65px); 
+			  height: calc(100% - 65px); width:100%;
+			  position:fixed; top:0px; right:0px;
+			  
+			  }
+			  
+			  #battery{ background:#fff; width:100%; height:20px; position:fixed; top:0px; left:0px;}
+			  
+			  .group{width:100%; height:100%; position: absolute;  top:0px; right:0px; display:none;  }
+			  .page{ width:100%; height:100%;  position: absolute; top:0px; right:0px; opacity:0;overflow:auto;   }
+			  .first_group{ display: block; z-index:99; }
+			  .first_page{ opacity:1; z-index:99;   }
+			  .center{ display:table;}
+			  
+			  #cover{ width:100%; height:100%;  position: fixed;  top:0px; right:0px; opacity:0; z-index:2; }
+			  
+			  
+			  /************ Buttons *************/
+			  
+			  .button{
+			  -webkit-tap-highlight-color:none; 
+			  width: 90%; height:70px; 
+			  background: linear-gradient( 120deg, rgba(165,224,200,0.3) , rgba(0,0,0,0.0)) ; 
+			  background-color: rgba(165,224,200,0.0) ;
+			  border:1px solid rgba(255,255,255,0.3); 
+			  color:#FFF; font-size:18px; text-shadow: 0px 1px 1px #006600;
+			  transition: color 350ms, text-shadow 350ms , background-color 350ms; 
+			  }
+			  
+			  
+			  .button:active{
+			  background-color: rgba(255,255,255,0.8);
+			  color:#27ae61; text-shadow: none;
+			  transition: color 350ms, text-shadow 350ms, background-color 350ms; 
+			  }
+			  
+			  .button_type{
+			  border-radius: 2px;
+			  margin-top:10px; 
+			  }
+			  
+			  .button_option{
+			  border-radius:  5px;
+			  margin-top:0px;
+			  }
+			  
+			  .button_surah{
+			  width:95px; height:50px;
+			  border-radius: 4px; 
+			  margin:3px;
+			  }
+			  
+			  .button_answer{
+			  width:100%;	  
+			  border-radius: 5px;
+			  
+			  }
+			  
+			  .button_guess{ height:50px; width:140px;  border-radius: 5px; }
+			  
+			  .button_go_on{border-radius: 5px; color:#666; text-shadow: none;}
+			  
+			  .button_about{
+			  color: #666; text-shadow:none; background:none;  
+			  border:1px solid rgba(0,0,0,0.3); margin-bottom:10px;border-radius: 4px;  }
+			  
+			  
+			  
+			  
+			  
+			  
+			  /************ segue ***************/
+			  .segue{
+			  width:100%; height:65px; 
+			  position:fixed; top:-80px; right:0px; z-index:100;
+			  padding-top:15px;
+			  display:none;
+			  background-color:#FFF;
+			  color:#27ae61; font-size:18px; text-shadow: 0px 1px 1px #D8FCDD;
+			  box-shadow:0px 1px 20px #27ae61;
+			  
+			  }
+			  
+			  .segue table{ width:100%; height:100%; }
+			  .segue table td{ padding: 0px 20px 0px 20px; }
+			  
+			  
+			  
+			  /************* Select *************/
+			  
+			  table.option{
+			  width:90%;
+			  border-radius: 4px 4px 0px 0px;  
+			  background: ;
+			  color: #FFF; font-size:18px; text-shadow: 0px 1px 1px #006600;
+			  
+			  }
+			  
+			  table.option td{
+			  height:70px;  margin-top:10px; margin-bottom:10px;
+			  padding-right:10px;  
+			  }
+			  
+			  input[type="number"] , select {
+			  height:100%; width:50px; 
+			  
+			  background:none; 
+			  color: #FFF; font-size:18px; text-shadow: 0px 1px 1px #006600;  text-align:center;
+			  }select{text-align:left;}
+			  .select_surah{ width:80px;  }
+			  
+			  option{ color:#063 }option:active{ background-color:#CCC }
+			  #body_surah_name table tr td{
+			  padding:10px; width:100px;
+			  border:1px solid #F00;
+			  }
+			  
+			  
+			  
+			  #body_surah_name{
+			  margin-top:80px;  
+			  padding-top:10px; padding-bottom:10px; 
+			  }
+			  
+			  
+			  
+			  
+			  /************ quastion ************/
+			  
+			  
+			  
+			  .are_you_ready{ width:100%; top:75px;  height:calc(100% - 100px);   position:absolute;  }
+			  .box_you_ready{ width:100%; height:100%;}
+			  .you_ready_statement{ color: #FC0; font-size:24px; text-shadow: 0px 1px 5px #669966 }
+			  
+			  
+			  .main_box_question{
+			  width:100%; top:75px;  height:calc(100% - 100px);   position:absolute; display:none; 
+			  }
+			  
+			  .box_question{
+			  height: 100px; width:100%;
+			  background-color:rgba(0,0,0,0.2);
+			  top:80px;
+			  }
+			  
+			  .box_question td{color:#fff; text-shadow:  0px 2px 2px #27ae61;}
+			  .box_question td h1{color:#ffad39; text-shadow: none; font-size:24px; }
+			  
+			  
+			  
+			  
+			  .box_ayah{
+			  height: 100px; width:90%;
+			  top:165px; 
+			  color:#fff; text-align: center;
+			  margin:10px;
+			  
+			  }
+			  .box_ayah tr td , .verse  {  font-family:arial; font-size:20px; text-align: justify }
+			  .number_ayah{
+ 			  font-size:18px; color:#063;
+			  }
+			  
+			  
+			  
+			  .box_buttons{
+			  width:90%;
+			  top:265px; 
+			  color:#fff; text-align: center;
+			  margin-right:5%;
+			  }
+			  
+			  .box_buttons td{ padding:5px;}
+			  
+			  .box_correction{ width:100%; height:calc(100% - 100px);  top:75px;  position:absolute;  display:none; }
+			  .box_correction_background{
+			  width:80%; height:160px; 
+			  background: linear-gradient( 120deg,#fff, rgba(255,255,255,0.5)); 
+			  text-align:center; 
+			  border:1px solid rgba(255,255,255,0.8); border-radius: 2px;
+			  }
+			  
+			  .correction_statement{ color: #666; font-size:18px; margin-bottom:20px; margin-top:20px; }
+			  .no_answer{ width: 45%; height:65px; font-size:18px; background: #D20005; color:#FFF; border-radius: 2px;}
+			  .yes_answer{ width: 45%; height:65px; font-size:18px; background: #4EC100; color:#FFF; border-radius: 2px;}
+			  
+			  
+			  
+			  .box_this_degree{width:100%; top:75px;  height:calc(100% - 100px);   position:absolute; display:none; }
+			  .box_this_degree h2{  color:#FFF; text-shadow: 0px 1px 1px #006600;}
+			  .box_this_degree h1{  color: #FC0; }
+			  
+			  /************** guess ***********/
+			  .true_statement{ color:#090;  display:none;}
+			  .false_statement{ color: #F00;  display:none;  }
+			  .true_surah_name{ color:#333; }
+			  
+			  
+			  /************ degree ************/
+			  
+			  .box_dgree{ width:100%; height:100px; background: rgba(0,0,0,0.1); }
+			  #general_degree{ font-size: 46px; color: #FC0 }
+			  #rows_degree{ width:80%;}
+			  #rows_degree tr td{ color:#FFF; text-shadow: 0px 1px 1px #006600; font-weight:100; }
+			  
+			  
+			  /************ about ************/
+			  
+			  #background_about{
+			  width:100%; height:100%;
+			  background: radial-gradient(#fff,#ccdadd); 
+			  
+			  padding-top:20px;}
+			  
+			  #background_about .line{
+			  width:270px; height:1px; 
+			  border-bottom:1px solid #FFF; background: #ccdadd; 
+		 	  margin-top:10px; margin-bottom:20px; 
+			  }
+			  #background_about h3{ color: #333; text-align: justify; font-family:arial; font-size:16px; font-weight:100; width:270px; }
+			  
+			 
+			  .button_about{
+			   
+			  border: none; 
+			   
+			  }
+			  
+			  .icons_about{ font-size:24px; color:#333; margin-bottom:-100px; margin-right:20px;}
+			  
+			  
+			  

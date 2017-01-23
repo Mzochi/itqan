@@ -1,0 +1,49 @@
+               
+               
+               
+               
+               
+               <center>
+               
+               
+              <table class="option">
+              <tr>
+              <td align="right"> من الصفحة:</td>
+              <td align="left"><select id="page_from"></select></td>
+              </tr>
+              
+              <tr>
+              <td align="right"> إلى الصفحة:</td>
+              <td align="left"> <select id="page_to"></select> </td>
+              </tr>
+              
+              <tr>
+              <td align="right"> عدد الأسئلة:</td>
+              <td align="left"><select id="page_num"></select> </td>
+              </tr>
+              
+              </table>
+     
+
+               <button class="change_page button button_option" data-page_id="question_page" id="enter_question_page" > الدخول للاختبار </button>
+               
+               </center>  
+               
+               
+               <script>
+               
+			    
+			  /***/
+			  $("#enter_question_page").on( 'touchend', function(){
+			  pageAction.setting();
+			  });
+			  /***/
+			  
+			  
+			  selects.make_option( "page_from" , 604 , 1 );
+			  selects.make_option( "page_to" , 604 , 604 );
+			  selects.make_option( "page_num" , 100 , 10 );
+               
+               </script>
+               
+ 

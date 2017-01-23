@@ -1,0 +1,48 @@
+               
+               
+               
+               
+               
+               <center>
+               
+               
+              <table class="option">
+              <tr>
+              <td align="right"> من الجزء:</td>
+              <td align="left"> <select id="guess_from"></select> </td>
+              </tr>
+              
+              <tr>
+              <td align="right"> إلى الجزء:</td>
+              <td align="left"> <select id="guess_to"></select> </td>
+              </tr>
+              
+              <tr>
+              <td align="right"> عدد الأسئلة:</td>
+              <td align="left"> <select id="guess_num"></select> </td>
+              </tr>
+              
+              </table>
+     
+
+               <button class="change_page button button_option" data-page_id="question_guess" id="enter_question_guess" > الدخول للاختبار </button>
+               
+               </center>  
+               
+               
+               <script>
+               
+			   
+				/***/
+				$("#enter_question_guess").on( 'touchend', function(){
+				guessAction.setting();
+				});
+				/***/
+				
+				selects.make_option( "guess_from" , 30 , 1 );
+				selects.make_option( "guess_to" , 30 , 30 );
+				selects.make_option( "guess_num" , 100 , 10 );
+               
+               </script>
+               
+ 
